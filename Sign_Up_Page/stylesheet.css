@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+header{
+  background-color: white;/*aliceblue*/
+  display:grid;
+  grid-template-columns: 1fr auto minmax(600px,1fr) 1fr;   /*to get the nav bar to pin to the top of the page we need to display fixed. and assign top, right, bottom and left. the element is potioned relative to the view port.*/
+}
+
+.logo{
+  grid-column: 2 / span 1;
+}
+
+.navBar{
+  
+  grid-column: 3 / span 1;
+
+}
+
+nav ul{
+  list-style: none;
+  
+  display: flex;  /* list items are block level by default */ 
+  justify-content: flex-end;
+ 
+  
+}
+nav li{
+  margin: 0 0 0 2rem;
+   display: flex;
+
+}
+nav a{
+  text-decoration: none;
+  color: black;
+  font-size: 1 rem;
+}
+nav a:hover{
+  color: green;
+}
+
+
+.titleContainer{
+  /*border: 3px solid purple;*/
+  display:grid;
+  grid-template-columns: auto 600px auto;
+  background-color: black;
+  color: white;
+  
+}
+.column1{
+  display: flex;
+}
+.pageTitle{
+  margin: 0 0 0 2rem;
+}
+body{
+  min-height:100vh;
+  background-image:url(./Images/newWholeGymPic.jpg);
+  background-size: cover;
+ 
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+.form1 {
+  border: 2px solid black;
+  border-top: none;
+  /*position: relative;*/
+  
+  padding: 0rem;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+
+/*.form1::after{                  didn't need all this to display change the background opacity.
+  background-color: whitesmoke;
+  opacity: 85%;
+  content: ''; 
+	width: 100%; 
+	height: 100%;
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	z-index: -1;
+}*/
+.formlabels1{
+  color: black;
+  display:block;
+}
+
+.textFields1{
+  margin-bottom: 0.6rem;
+}
+
+.genderSelectorContainer{
+  display: flex;
+  gap: 1rem;
+ 
+}
+.genderQuestion{
+  
+  display:block;
+}
+
+
+.specificGenderRadioContainer{
+  
+  cursor: pointer;
+}
+.genderAnswers{
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+
+
+.daySelectorContainer{
+  
+  display: grid;
+  gap:  1rem;
+  grid-template-columns: repeat(6,1fr);
+  margin-bottom: 0.6rem;
+}
+.specificDayContainer{
+  
+}
+
+.formContainer{
+display: flex;
+padding: 0rem;
+justify-content: center;
+align-items: center;
+
+
+}
+.whichDayQuestion{
+  color:black
+}
+
+.paymentMethodQuestion{
+  
+  color:black
+}
+
+.paymentMethodContainer{
+  display: flex;
+  gap: 1rem;
+}
+.paymentAnswers{
+  margin-bottom: 0.6rem;;
+}
+
+.commentsContainer{
+  display:inline-flex;
+  width: 263.33;
+
+}
+#comments{
+  resize: none;
+  height: 20px;
+  min-width: 262.33px;
+}
+
+.submitButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 10px;
+}
+
+.submitbutton{
+  border-radius: 0.6rem;
+  
+  padding: 1rem;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 6px 0px rgb(171, 1, 1);
+  transition: all 0.1s;
+  font-family: "Montserrat";
+  font-weight: 700;
+
+}
+
+
+.submitbutton:active{
+  position: relative;
+  box-shadow: 0px 2px 0px rgb(171, 1, 1);
+  top: 4px;
+  
+
+}
+footer{
+  background-color: white;
+  display: block;
+  border-top: 2px solid black;
+  bottom: 0px;
+  position: absolute;
+  width:100%;
+  height: 37px;
+}
+.footerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
